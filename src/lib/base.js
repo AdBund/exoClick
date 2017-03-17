@@ -25,7 +25,7 @@ export default class Base {
           type = body.type;
           let {expires_in} = body;
 
-          setTimeout(()=> {
+          setTimeout(() => {
             token = '';
             type = '';
           }, (expires_in / 2) * 1000);
@@ -33,8 +33,7 @@ export default class Base {
           resolve(`${type} ${token}`);
         })
       }
-    }
-  )
+    })
   }
 
 }

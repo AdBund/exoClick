@@ -25,4 +25,25 @@ export default class getCampagin extends Base {
       return p.then(res => res.body);
     })
   }
+
+  start({campaign_id}) {
+    let path = `${this.baseUrl}/campaigns/${campaign_id}/play`
+    return this.getToken().then((token) => {
+      let p = request.put(path)
+                     .set({
+                       'Authorization': token
+                     }).send({}).end();
+      return p.then(res => res.body);
+    })
+  }
+
+  pause({campaign_id}) {
+    let path = `${this.baseUrl}/campaigns/${campaign_id}/pause`
+    return this.getToken().then((token) => {
+      let p = request.put(path)
+                     .set({
+                       'Authorization': token
+                     }).send({}).end();
+      return p.then(res => res.body);    })
+  }
 }
