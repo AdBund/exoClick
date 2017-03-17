@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "exoClick",
   "version": "1.0.0",
   "description": "",
   "main": "dest/index.js",
@@ -9,7 +9,7 @@
     "build": "babel src --out-dir dest",
     "watch:test": "nodemon --watch ./src --watch ./test --recursive --exec npm run test",
     "watch:build": "nodemon --watch ./src --recursive --exec npm run build",
-    "prepublish": "npm run eslint && npm run build"
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
